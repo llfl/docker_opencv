@@ -1,6 +1,6 @@
 FROM ubuntu:18.04
 
-RUN apt-get update && apt-get install -y -–no-install-recommends cmake g++ wget unzip git pkg-config && apt-get clean
+RUN apt-get update && apt-get install -y cmake g++ wget unzip git pkg-config && apt-get clean
 RUN wget https://github.com/opencv/opencv/archive/refs/tags/4.5.1.zip && unzip 4.5.1.zip && cd opencv-4.5.1 && mkdir build
 RUN git clone https://github.com/opencv/opencv_contrib.git 
 WORKDIR /opencv-4.5.1/build
