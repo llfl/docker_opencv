@@ -30,7 +30,7 @@ RUN cmake -D CMAKE_BUILD_TYPE=Release\
           -D BUILD_PROTOBUF=OFF\
           -D OPENCV_EXTRA_MODULES_PATH=/opencv_contrib/modules ..
 
-# RUN make -j8 && make install
+RUN make -j8 && make install
 
 WORKDIR /
 RUN apt-get autoremove &&\
